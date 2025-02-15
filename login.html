@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | MyWebsite</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles specific to the login page */
+        .auth-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            padding: 20px;
+            background-color: #000; /* Black Background */
+            color: #fff; /* White text */
+        }
+
+        .auth-container h1 {
+            margin-bottom: 20px;
+            animation: slideInDown 0.5s ease-out;
+            color: #fff; /* White text */
+        }
+
+        .auth-form {
+            width: 320px;
+            padding: 30px;
+            background-color: rgba(0,0,0,0.5); /*Light Black transparent background*/
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.5s ease-out;
+            color: #fff; /* White text */
+        }
+
+        .auth-form div {
+            margin-bottom: 20px;
+
+        }
+
+        .auth-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #fff; /* White text */
+        }
+
+        .auth-form input[type="text"],
+        .auth-form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #555; /* Dark border */
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+            font-size: 1rem;
+            background-color: #444; /* Darker Input Field */
+            color: #fff; /* White text */
+        }
+
+        .auth-form input[type="text"]:focus,
+        .auth-form input[type="password"]:focus {
+            border-color: #800080; /* Purple Highlight */
+            outline: none;
+            box-shadow: 0 0 5px rgba(128, 0, 128, 0.3);
+        }
+
+        .auth-form button {
+            width: 100%;
+            padding: 14px 20px;
+            background-color: #800080;/* Purple Buttons */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-form button:hover {
+            background-color: #660066; /* Darker Purple Hover*/
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-form {
+            margin-top: 20px;
+            cursor: pointer;
+            color: #800080;  /*Purple Button*/
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-form:hover {
+            color: #660066; /* Darker Purple Hover */
+            text-decoration: underline;
+        }
+      .forgot-password{
+                color: #800080;  /*Purple Link*/
+                text-decoration: none;
+                transition: color 0.3s ease;
+        }
+            .forgot-password:hover {
+            color: #660066; /* Darker Purple Hover */
+            text-decoration: underline;
+        }
+/* Position the Forgot Password under the signup link */
+.auth-container p{
+    margin-bottom: 10px; /*Space between Signup and Forgot password */
+}
+.auth-container .forgot-password {
+    display: block; /* Display to put on a new line */
+    text-align: center; /*Center the text*/
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">MyWebsite</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
+
+    <section class="auth-container">
+        <h1 id="auth-title">Login</h1>
+        <form id="auth-form" class="auth-form">
+            <div id="username-div">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div id="password-div">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="toggle-form" class="toggle-form">Don't have an account? <a href = "register.html" style = "text-decoration : underline">Signup</a>
+</p>
+ <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2025 MyWebsite. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

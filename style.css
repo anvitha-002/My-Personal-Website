@@ -1,0 +1,407 @@
+/* Reset and General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+/* Site Header */
+.site-header {
+    background: #111; /* Darker header */
+    color: #fff;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.site-header.scrolled {
+    background: rgba(17, 17, 17, 0.9); /* Darker scrolled header */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 8px 12px; /* Add padding for better click area */
+    border-radius: 12px; /* Rounded corners */
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background: #800080; /* Purple hover */
+    transform: scale(1.05);
+}
+
+/* Search Bar */
+.search-bar input {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    transition: box-shadow 0.3s ease;
+    font-size: 0.9rem;
+    background: #fff; /* White search bar */
+    color: #000; /* Black text */
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 7px rgba(128, 0, 128, 0.5); /* Purple focus */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the hero section */
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensure the video covers the entire area */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* CTA Button */
+.cta-button {
+    background: #800080; /* Purple buttons */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 12px; /* Rounded corners */
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: #660066; /* Darker purple hover */
+    transform: scale(1.07);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Larger minimum size */
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.service-item {
+    background: #222; /* Dark service items */
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.service-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Site Footer */
+.site-footer {
+    background: #111; /* Darker footer */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #800080; /* Purple hover */
+    transform: scale(1.1);
+}
+
+/* Additional Styles for Content Sections (About, Blog, Contact) */
+.content {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Forms */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+  background-color: #444;
+  color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #800080;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #800080;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #660066;
+  transform: scale(1.05);
+}
+
+/* Styles specific to the login/register page */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 20px;
+    background-color: #111;
+    color: #fff
+}
+
+.auth-container h1 {
+    margin-bottom: 20px;
+    animation: slideInDown 0.5s ease-out;
+    color: #fff;
+}
+
+.auth-form {
+    width: 300px;
+    padding: 30px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.auth-form div {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ddd;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+    color: #fff;
+    background-color: #444;
+}
+
+.auth-form input[type="text"]:focus,
+.auth-form input[type="password"]:focus,
+.auth-form input[type="email"]:focus {
+    border-color: #800080;
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 0, 128, 0.3);
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #800080;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form button:hover {
+    background-color: #660066;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-form {
+    margin-top: 20px;
+    cursor: pointer;
+    color: #800080;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.toggle-form:hover {
+    color: #660066;
+    text-decoration: underline;
+}
+
+/* Keyframes for Animations */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
